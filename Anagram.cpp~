@@ -1,0 +1,76 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+    int n, caseNum = 0;
+    cin >> n;
+    while (getchar() != '\n');
+    while (getchar() != '\n');
+    while (caseNum++ != n) {
+        if (caseNum > 1)
+            cout << endl;
+        string tmp = "", tmp2;
+        char c;
+        vector<string> list;
+        vector<string> rList;
+        while (true) {
+            while ((c = getchar()) != '\n') {
+                if (!isspace(c))
+                    tmp.push_back(c);
+                tmp2.push_back(c);
+            }
+            if (tmp.empty())
+                break;
+            list.push_back(tmp);
+            rList.push_back(tmp2);
+            tmp = "";
+            tmp2 = "";
+        }
+        vector<vector<bool>> isAl(list.size(), vector<bool>(list.size(), false));
+        vector<string> fList;
+        for (int i = 0; i < list.size(); i++) {
+            for (int j = 0; j < list.size(); j++) {
+                if(isAl[i][j])
+                    continue;
+                isAl[i][j] = true;
+                isAl[j][i] = true;
+                bool isAnag = true;
+                if (j == i)
+                    continue;
+                if (list[i].size() != list[j].size())
+                    continue;
+                for (int k = 0; k < list[i].size(); k++) {
+                    if (list[j].find(list[i][k]) == string::npos) {
+                        isAnag = false;
+                        break;
+                    }
+                    if (list[i].find(list[j][k]) == string::npos) {
+                        isAnag = false;
+                        break;
+                    }
+
+                }
+                if (isAnag) {
+                    if(rList[i] < rList[j])
+                        tmp = rList[i] + " = " + rList[j];
+                    else
+                        tmp = rList[j] + " = " + rList[i];
+                    fList.push_back(tmp);
+                }
+            }
+        }
+        for(int i = 0; i < fList.size(); i++) {
+            for (int j = 0; j < fList.size() - 1; j++)
+                if (fList[j] > fList[j + 1])
+                    swap(fList[j], fList[j + 1]);
+            cout << fList[i] << endl;
+        }
+
+    }
+
+    return 0;
+}
