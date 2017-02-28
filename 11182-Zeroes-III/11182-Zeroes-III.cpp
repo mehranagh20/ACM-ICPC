@@ -79,37 +79,40 @@ int main() {
     ios::sync_with_stdio(0);
     int n, b;
     sieve(1e6);
-    while(cin >> n >> b && (n || b)){
+    while(cin >> n >> b && n && b){
         vii PF = primeFactors(b);
         vll counts(PF.size(), 0);
-        vvll f1(n+2, vll(PF.size(), 0));
-
-        for (int i = 2; i < n+2; ++i) {
-            for (int j = 0; j < PF.size(); ++j) {
-                ll pf = PF[j].first;
-                ll sum = 0, base = pf;
-                while(base <= i){
-                    sum += (i / base);
-                    base *= pf;
+        for(int j = PF.size() - 1; j >= 0; j--){
+            auto pf = PF[j].first;
+            bool check = true;
+            double tm = PF[j].first;
+            for(int i = j + 1; i < PF.size(); i++) {
+                int tmpp = ceil(PF[i].first / tm) + eps;
+                if(PF[j].second < tmpp * PF[i].second) {
+                    check = false;
+                    break;
                 }
-                f1[i][j] = f1[i-1][j] + sum;
+            }
+            if(!check) {
+                counts[j] = -1;
+                continue;
+            }
+            //cout << "pf is " << pf << endl;
+            for (ll i = pf; i <= n; i += pf) {
+                ll base = 0, tmp = i;
+                while(tmp % pf == 0) tmp /= pf, base++;
+                ll c = n - i + 1;
+                ll power = (c * (c+1)) / 2;
+                counts[j] += base * power;
+                //cout << "i is " << i << " count is " << counts[j] << endl;
             }
         }
-
-
-        for (int i = 0; i < PF.size(); ++i) {
-            ll sum = 0;
-            for (int j = 0; j < n+1; ++j) {
-                sum += f1[j][i];
-            }
-            counts[i] = sum;
-        }
-
-
-        ll ans = counts[0];
-        for (int i = 0; i < PF.size(); ++i) {
-            ans = min(ans, counts[i] / PF[i].second);
-        }
+        ll ans = counts[PF.size() - 1];
+        //cout << PF[0].first << " " << counts[0] << endl << PF[1].first << " " << counts[1] << endl;
+        //cout << (double) counts[0] / counts[1] << endl;
+        for (int i = 0; i < PF.size(); ++i)
+            if(counts[i] != -1)
+                ans = min(ans, counts[i] / PF[i].second);
         cout << ans << endl;
     }
 
