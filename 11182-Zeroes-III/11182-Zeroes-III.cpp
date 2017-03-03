@@ -78,7 +78,7 @@ vii primeFactors(ll n) {
 int main() {
     ios::sync_with_stdio(0);
     int n, b;
-    sieve(1e6);
+    sieve(1e2 + 10);
     while(cin >> n >> b && n && b){
         vii PF = primeFactors(b);
         vll counts(PF.size(), 0);

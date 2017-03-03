@@ -28,22 +28,33 @@ typedef vector<dd> vdd;
 #define inf 1000000000
 #define eps 1e-9
 
+ll x, y, d;
+
+void extendedEuclid(ll a, ll b) {
+    if (b == 0) {
+        x = 1;
+        y = 0;
+        d = a;
+        return;
+    } // base case
+    extendedEuclid(b, a % b); // similar as the original gcd
+    ll x1 = y;
+    ll y1 = x - (a / b) * y;
+    x = x1;
+    y = y1;
+}
+
 int main() {
     ios::sync_with_stdio(0);
-    string str;
-    while(cin >> str) {
-        sort(str.begin(), str.end());
-        string sec;
-        for(int i = str.size() - 1; i >= 0; i--) sec += str[i];
-        int i = str.size() - 1;
-        while(sec[i] == '0') i--;
-        string first; first += sec[i];
-        for(int j = i + 1; j < str.size(); j++) first += '0';
-        i--;
-        for(; i >= 0; i--) first += sec[i];
+    int tc; cin >> tc;
+    while(tc--) {
+        ll xx, yy;
+        cin >> xx >> yy;
+        ll b = ceil((double)xx / yy), a = xx / yy;
+        extendedEuclid(a, b);
+        cout << (xx / d) * x + (b / d) << " " << (xx / d) * y - (a / d) << endl;
+        //  cout << (x * xx) / d << ' ' << (y * xx) / d << endl;
 
-        ll x = stoll(sec) - stoll(first);
-        cout << stoll(sec) << " - " << stoll(first) << " = " << x << " = " << 9 << " * " << x / 9 << endl;
     }
 
 
