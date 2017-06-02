@@ -1,24 +1,13 @@
-//                                                  In The Name Of God
-//                                              programmer:Mohammad Dehghan
-#include <iostream>
-using namespace std;
+//In The Name Of God
+#include <bits/stdc++.h>
 
-#include <vector>
-#include <set>
-#include <string>
-#include <string.h>
-#include <math.h>
-#include <map>
-#include <iomanip>
-#include <queue>
-#include <algorithm>
-#include <sstream>
+using namespace std;
 
 typedef long long ll;
 typedef unsigned long long ull;
 typedef vector<string> vs;
 typedef pair<int, int> ii;
-typedef pair<int, ii> iii;
+typedef pair<ii, int> iii;
 typedef vector<int> vi;
 typedef vector<vi> vvi;
 typedef vector<double> vd;
@@ -35,110 +24,65 @@ typedef set<int> si;
 typedef vector<si> vsi;
 typedef pair<double, double> dd;
 typedef vector<dd> vdd;
+typedef pair<dd, double> ddd;
+typedef vector<ddd> vddd;
 
 #define inf 1000000000
 #define eps 1e-9
-int n , indexx;
-vvi cells;
-vi rows , coloums;
-vii answer;
-bool check = false;
 
-bool backtarcking(int i) {
-
-    if(i == n) return true;
-
-    for (int j = cells[i][0]; j <= cells[i][2]; ++j) {
-        if(rows[j]) continue;
-        for (int k = cells[i][1]; k <= cells[i][3]; ++k) {
-            if(!coloums[k]) {
-                rows[j] = 1;
-                coloums[k] = 1;
-               // cout<<"i:"<<i<<"    "<< j+1 <<" , "<< k+1<<endl;
-                if(backtarcking(i + 1)) {
-                    answer[i] = ii(j , k);
-                    return true;
-                }
-                rows[j] = 0;
-                coloums[k] =0;
-            }
-        }
-    }
-    return false;
+bool comp(iii a, iii b) {
+    return a.first.first < b.first.first;
 }
 
-int main(){
-    while (cin >> n && n){
-        cells.clear();
-        cells.resize(n+1,vi(4));
-        answer.clear();
-        answer.resize(n , make_pair(0,0));
-        rows.clear();
-        rows.resize(n , 0);
-        coloums.clear();
-        coloums.resize(n , 0);
-        indexx = 0;
-        for (int i = 0; i < n; ++i) {
-            for (int j = 0; j < 4; ++j) {
-                int a; cin >> a;
-                cells[i][j] = a - 1;
-            }
-        }
-        if(!backtarcking(0)) cout << "IMPOSSIBLE" << endl;
-        else {
-            for(auto &e : answer)
-                cout << e.first + 1 << " " << e.second + 1 << endl;
-        }
-
+class mycompare {
+public:
+    bool operator() (iii a, iii b) {
+        return a.first.second > b.first.second;
     }
-}
+};
 
-//int nodes , edges;
-//vvi graph;
-//vi flag(101 , 0);
-//int blacks = 0 , maxblacks = 0;
-//
-//
-//void backtracking(int i) {
-//    flag[i] = 1;
-//    bool check = false;
-//    for (int k, j = 1; j <= nodes; ++j) {
-//        for (k = 0; !flag[j] && k < graph[j].size(); ++k) {
-//            if (flag[graph[j][k]]) {
-//                //check = true;
-//                break;
-//            }
-//        }
-//        if (k == graph[j].size() && j) {
-//            blacks++;
-//            if(maxblacks < blacks)
-//                maxblacks = blacks;
-//            backtracking(j);
-//            flag[j] = 0;
-//            blacks--;
-//        }
-//    }
-//
-//}
-//
-//int main() {
-//    int tc;
-//    cin >> tc;
-//    while (tc--) {
-//        cin >> nodes >> edges;
-//        graph.resize(nodes+1);
-//        for (int i = 0; i < edges; ++i) {
-//            int first, second;
-//            cin >> first >> second;
-//            graph[first].push_back(second);
-//            graph[second].push_back(first);
-//        }
-//        backtracking(0);
-//        cout << maxblacks<< endl;
-//        graph.clear();
-//        blacks = 0;
-//        maxblacks = 0;
-//        flag.clear();
-//        flag.resize(101 , 0);
-//    }
-//}
+int main() {
+    ios::sync_with_stdio(0);
+    int n;
+    while(cin >> n && n) {
+        viii xs(n), ys(n);
+        vii ans(n);
+        for(int i = 0; i < n; i++) {
+            cin >> xs[i].first.first >> ys[i].first.first >> xs[i].first.second >> ys[i].first.second;
+            xs[i].second = ys[i].second = i;
+        }
+        sort(xs.begin(), xs.end(), comp);
+        sort(ys.begin(), ys.end(), comp);
+        bool impossible = false;
+        priority_queue<iii, viii, mycompare> xp, yp;
+        int xl = 0, yl = 0;
+        for(int i = 1; i <= n; i++) {
+            while(xl < n) {
+                if(xs[xl].first.first <= i) xp.push(xs[xl]);
+                else break;
+                xl++;
+            }
+            while(yl < n) {
+                if(ys[yl].first.first <= i) yp.push(ys[yl]);
+                else break;
+                yl++;
+            }
+            if(xp.empty() || yp.empty()) {
+                impossible = true;
+                break;
+            }
+            iii tmp = xp.top(); xp.pop();
+            if(tmp.first.second < i) impossible = true;
+            ans[tmp.second].first = i;
+            tmp = yp.top(); yp.pop();
+            if(tmp.first.second < i) impossible = true;
+            ans[tmp.second].second = i;
+        }
+        if(impossible) cout << "IMPOSSIBLE" << endl;
+        else
+            for(auto &e: ans) cout << e.first << " " << e.second << endl;
+    }
+
+
+    return 0;
+}
