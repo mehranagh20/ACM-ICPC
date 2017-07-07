@@ -51,7 +51,7 @@ int main() {
     while(cin >> l >> c >> r1 >> r2 && (l || c || r1 || r2)) {
         if(r1 < r2) swap(r1, r2);
         double x1 = -r1, y1 = r1, x2 = l - r1, y2 = r1 - c;
-        double low = 0, high = 360;
+        double low = 0, high = 270;
         dd initial = dd(-(r1 + r2), 0);
         bool pos = false;
         while(fabs(high - low) > eps) {

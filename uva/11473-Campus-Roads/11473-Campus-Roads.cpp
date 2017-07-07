@@ -177,13 +177,13 @@ int main() {
                 k++;
                 lastpoint = points[k];
             }
-            double leftx = lastpoint.first , lefty =lastpoint.second , rightx = points[k+1].first , righty = points[k+1].second, x = (leftx + rightx)/2 , y = (lefty + righty)/2 , tempdis = distance(lastpoint , pair<double , double>(x , y));
+            double leftx = lastpoint.first , lefty = lastpoint.second , rightx = points[k + 1].first , righty = points[k + 1].second, x = (leftx + rightx)/2 , y = (lefty + righty)/2 , tempdis = distance(lastpoint , pair<double , double>(x , y));
             while (fabs(Distnow - tempdis) > 0.000000000001){
                 if(Distnow > tempdis)
                     leftx = x , lefty = y;
                 else
                     rightx = x , righty = y;
-                x = (leftx + rightx)/2 , y = (lefty + righty)/2 ;
+                x = (leftx + rightx) / 2 , y = (lefty + righty) / 2 ;
                 tempdis = distance(lastpoint , pair<double , double>(x , y));
             }
 
@@ -191,7 +191,7 @@ int main() {
         }
         cout <<"Road #"<<kk<<":"<<endl;
         for (int l = 0; l < T; ++l) {
-            cout << fixed<<setprecision(2)  << trees[l].first << " " << trees[l].second << endl;
+            cout << fixed << setprecision(2)  << trees[l].first << " " << trees[l].second << endl;
         }
         cout << endl;
     }
