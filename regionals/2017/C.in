@@ -1,0 +1,168 @@
+11
+021   Oland
+0511  Moland
+0311  Boland
+03121 Kamand
+92     AreaA
+912    AreaB
+9112   AreaC
+91112  AreaD
+911112 AreaE
+81	CodeArea
+80	GrowingArea
+132
+2002 1 Moland 2
+2001 3 Moland 0515
+2003 2 Boland 3
+2005 1 Kamand 1
+2000 1 Kamand 1
+1999 1 Kamand 1
+1998 3 Oland 012345
+11   3 AreaA 93
+12   3 AreaB 922
+16   2 AreaA 1
+17   1 AreaB 1
+30   1 GrowingArea 1
+31   1 GrowingArea 1
+32   1 GrowingArea 1
+33   1 GrowingArea 1
+34   1 GrowingArea 1
+35   1 GrowingArea 1
+36   1 GrowingArea 1
+37   1 GrowingArea 1
+38   1 GrowingArea 1
+39   1 GrowingArea 1
+40   1 GrowingArea 1
+41   1 GrowingArea 1
+42   1 GrowingArea 1
+43   1 GrowingArea 1
+44   1 GrowingArea 1
+45   1 GrowingArea 1
+46   1 GrowingArea 1
+47   1 GrowingArea 1
+48   1 GrowingArea 1
+49   1 GrowingArea 1
+50   1 GrowingArea 1
+51   1 GrowingArea 1
+52   1 GrowingArea 1
+53   1 GrowingArea 1
+54   1 GrowingArea 1
+55   1 GrowingArea 1
+56   1 GrowingArea 1
+57   1 GrowingArea 1
+58   1 GrowingArea 1
+59   1 GrowingArea 1
+60   1 GrowingArea 1
+61   1 GrowingArea 1
+62   1 GrowingArea 1
+63   1 GrowingArea 1
+64   1 GrowingArea 1
+65   1 GrowingArea 1
+66   1 GrowingArea 1
+67   1 GrowingArea 1
+68   1 GrowingArea 1
+69   1 GrowingArea 1
+70   1 GrowingArea 1
+71   1 GrowingArea 1
+72   1 GrowingArea 1
+73   1 GrowingArea 1
+74   1 GrowingArea 1
+75   1 GrowingArea 1
+76   1 GrowingArea 1
+77   1 GrowingArea 1
+78   1 GrowingArea 1
+79   1 GrowingArea 1
+80   1 GrowingArea 1
+81   1 GrowingArea 1
+82   1 GrowingArea 1
+83   1 GrowingArea 1
+84   1 GrowingArea 1
+85   1 GrowingArea 1
+86   1 GrowingArea 1
+87   1 GrowingArea 1
+88   1 GrowingArea 1
+89   1 GrowingArea 1
+90   1 GrowingArea 1
+91   1 GrowingArea 1
+92   1 GrowingArea 1
+93   1 GrowingArea 1
+94   1 GrowingArea 1
+95   1 GrowingArea 1
+96   1 GrowingArea 1
+97   1 GrowingArea 1
+98   1 GrowingArea 1
+99   1 GrowingArea 1
+100   1 GrowingArea 1
+101   1 GrowingArea 1
+102   1 GrowingArea 1
+103   1 GrowingArea 1
+104   1 GrowingArea 1
+105   1 GrowingArea 1
+106   1 GrowingArea 1
+107   1 GrowingArea 1
+108   1 GrowingArea 1
+109   1 GrowingArea 1
+110   1 GrowingArea 1
+111   1 GrowingArea 1
+112   1 GrowingArea 1
+113   1 GrowingArea 1
+114   1 GrowingArea 1
+115   1 GrowingArea 1
+116   1 GrowingArea 1
+117   1 GrowingArea 1
+118   1 GrowingArea 1
+119   1 GrowingArea 1
+120   1 GrowingArea 1
+121   1 GrowingArea 1
+122   1 GrowingArea 1
+123   1 GrowingArea 1
+124   1 GrowingArea 1
+125   1 GrowingArea 1
+126   1 GrowingArea 1
+127   1 GrowingArea 1
+128   1 GrowingArea 1
+129   1 GrowingArea 1
+139   3 GrowingArea 800000000000000
+150   3 CodeArea 811
+151   3 CodeArea 8111
+152   3 CodeArea 8111
+153   3 CodeArea 811
+154   3 CodeArea 811111
+155   3 CodeArea 8112
+156   3 CodeArea 81111111
+157   3 CodeArea 811012901
+158   3 CodeArea 811
+159   3 CodeArea 81
+170   2 CodeArea 1
+171   2 CodeArea 2
+172   2 CodeArea 3
+173   2 CodeArea 4
+174   2 CodeArea 5
+175   2 CodeArea 5
+176   2 CodeArea 4
+177   2 CodeArea 3
+178   2 CodeArea 2
+179   2 CodeArea 1
+2000 2005 0311243426
+2000 2005 05113837462
+2000 2005 03121437478
+10  20  9221
+12  20  9221
+1   130  801
+50  130  801
+60  60   801
+1   140  801
+1   160  81654
+1   130  81654
+1   140  81654
+1   150  81654
+1   140  81654
+1   172  81543210 
+1   174  81543210 
+1   175  81543210 
+1   176  81543210 
+1   177  81543210 
+1   180  81543210 
+1   181  81543210 
+172 181  81543210
+0 0 0
