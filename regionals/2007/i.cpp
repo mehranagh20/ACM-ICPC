@@ -32,6 +32,8 @@ typedef vector<ddd> vddd;
 
 int main() {
     ios::sync_with_stdio(0);
+    // solves wiht minimum cost maximum flow
+    // just copy the algorithm and print the solution :|
 
 
     return 0;
