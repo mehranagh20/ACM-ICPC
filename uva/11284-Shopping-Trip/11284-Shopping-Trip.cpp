@@ -14,7 +14,6 @@ vector<vector<int>> dist, memo;
 vector<pair<int, int>> price;
 
 int tsp(int pos, int bitmask) { // bitmask stores the visited coordinates
-    vector<vector<int>> &ddist = dist, &mmemo = memo;
     if(bitmask == (1 << n) - 1)
         return -dist[pos][0];
     if (memo[pos][bitmask] != -inf)

@@ -1,0 +1,797 @@
+11195-Another-n-Queen-Problem.cpp: In function ‘int main()’:
+11195-Another-n-Queen-Problem.cpp:52:10: error: no match for ‘operator<<’ (operand types are ‘std::ostream {aka std::basic_ostream<char>}’ and ‘void’)
+     cout << solve(0, 0, 0) << endl;
+          ^
+In file included from /usr/include/c++/5/istream:39:0,
+                 from /usr/include/c++/5/sstream:38,
+                 from /usr/include/c++/5/complex:45,
+                 from /usr/include/c++/5/ccomplex:38,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:52,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/ostream:108:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+       ^
+/usr/include/c++/5/ostream:108:7: note:   no known conversion for argument 1 from ‘void’ to ‘std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&) {aka std::basic_ostream<char>& (*)(std::basic_ostream<char>&)}’
+/usr/include/c++/5/ostream:117:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]
+       operator<<(__ios_type& (*__pf)(__ios_type&))
+       ^
+/usr/include/c++/5/ostream:117:7: note:   no known conversion for argument 1 from ‘void’ to ‘std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&) {aka std::basic_ios<char>& (*)(std::basic_ios<char>&)}’
+/usr/include/c++/5/ostream:127:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(ios_base& (*__pf) (ios_base&))
+       ^
+/usr/include/c++/5/ostream:127:7: note:   no known conversion for argument 1 from ‘void’ to ‘std::ios_base& (*)(std::ios_base&)’
+/usr/include/c++/5/ostream:166:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long __n)
+       ^
+/usr/include/c++/5/ostream:166:7: note:   no known conversion for argument 1 from ‘void’ to ‘long int’
+/usr/include/c++/5/ostream:170:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned long __n)
+       ^
+/usr/include/c++/5/ostream:170:7: note:   no known conversion for argument 1 from ‘void’ to ‘long unsigned int’
+/usr/include/c++/5/ostream:174:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(bool __n)
+       ^
+/usr/include/c++/5/ostream:174:7: note:   no known conversion for argument 1 from ‘void’ to ‘bool’
+In file included from /usr/include/c++/5/ostream:638:0,
+                 from /usr/include/c++/5/istream:39,
+                 from /usr/include/c++/5/sstream:38,
+                 from /usr/include/c++/5/complex:45,
+                 from /usr/include/c++/5/ccomplex:38,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:52,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/ostream.tcc:91:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^
+/usr/include/c++/5/bits/ostream.tcc:91:5: note:   no known conversion for argument 1 from ‘void’ to ‘short int’
+In file included from /usr/include/c++/5/istream:39:0,
+                 from /usr/include/c++/5/sstream:38,
+                 from /usr/include/c++/5/complex:45,
+                 from /usr/include/c++/5/ccomplex:38,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:52,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/ostream:181:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned short __n)
+       ^
+/usr/include/c++/5/ostream:181:7: note:   no known conversion for argument 1 from ‘void’ to ‘short unsigned int’
+In file included from /usr/include/c++/5/ostream:638:0,
+                 from /usr/include/c++/5/istream:39,
+                 from /usr/include/c++/5/sstream:38,
+                 from /usr/include/c++/5/complex:45,
+                 from /usr/include/c++/5/ccomplex:38,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:52,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/ostream.tcc:105:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^
+/usr/include/c++/5/bits/ostream.tcc:105:5: note:   no known conversion for argument 1 from ‘void’ to ‘int’
+In file included from /usr/include/c++/5/istream:39:0,
+                 from /usr/include/c++/5/sstream:38,
+                 from /usr/include/c++/5/complex:45,
+                 from /usr/include/c++/5/ccomplex:38,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:52,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/ostream:192:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned int __n)
+       ^
+/usr/include/c++/5/ostream:192:7: note:   no known conversion for argument 1 from ‘void’ to ‘unsigned int’
+/usr/include/c++/5/ostream:201:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long long __n)
+       ^
+/usr/include/c++/5/ostream:201:7: note:   no known conversion for argument 1 from ‘void’ to ‘long long int’
+/usr/include/c++/5/ostream:205:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned long long __n)
+       ^
+/usr/include/c++/5/ostream:205:7: note:   no known conversion for argument 1 from ‘void’ to ‘long long unsigned int’
+/usr/include/c++/5/ostream:220:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(double __f)
+       ^
+/usr/include/c++/5/ostream:220:7: note:   no known conversion for argument 1 from ‘void’ to ‘double’
+/usr/include/c++/5/ostream:224:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(float __f)
+       ^
+/usr/include/c++/5/ostream:224:7: note:   no known conversion for argument 1 from ‘void’ to ‘float’
+/usr/include/c++/5/ostream:232:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long double __f)
+       ^
+/usr/include/c++/5/ostream:232:7: note:   no known conversion for argument 1 from ‘void’ to ‘long double’
+/usr/include/c++/5/ostream:245:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(const void* __p)
+       ^
+/usr/include/c++/5/ostream:245:7: note:   no known conversion for argument 1 from ‘void’ to ‘const void*’
+In file included from /usr/include/c++/5/ostream:638:0,
+                 from /usr/include/c++/5/istream:39,
+                 from /usr/include/c++/5/sstream:38,
+                 from /usr/include/c++/5/complex:45,
+                 from /usr/include/c++/5/ccomplex:38,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:52,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/ostream.tcc:119:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^
+/usr/include/c++/5/bits/ostream.tcc:119:5: note:   no known conversion for argument 1 from ‘void’ to ‘std::basic_ostream<char>::__streambuf_type* {aka std::basic_streambuf<char>*}’
+In file included from /usr/include/c++/5/string:52:0,
+                 from /usr/include/c++/5/bits/locale_classes.h:40,
+                 from /usr/include/c++/5/bits/ios_base.h:41,
+                 from /usr/include/c++/5/ios:42,
+                 from /usr/include/c++/5/istream:38,
+                 from /usr/include/c++/5/sstream:38,
+                 from /usr/include/c++/5/complex:45,
+                 from /usr/include/c++/5/ccomplex:38,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:52,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/basic_string.h:5172:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5/bits/basic_string.h:5172:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   mismatched types ‘const std::basic_string<_CharT, _Traits, _Alloc>’ and ‘void’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/c++/5/bits/ios_base.h:46:0,
+                 from /usr/include/c++/5/ios:42,
+                 from /usr/include/c++/5/istream:38,
+                 from /usr/include/c++/5/sstream:38,
+                 from /usr/include/c++/5/complex:45,
+                 from /usr/include/c++/5/ccomplex:38,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:52,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/system_error:209:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::error_code&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __e)
+     ^
+/usr/include/c++/5/system_error:209:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:18: note:   cannot convert ‘solve(0, 0, 0)’ (type ‘void’) to type ‘const std::error_code&’
+     cout << solve(0, 0, 0) << endl;
+                  ^
+In file included from /usr/include/c++/5/istream:39:0,
+                 from /usr/include/c++/5/sstream:38,
+                 from /usr/include/c++/5/complex:45,
+                 from /usr/include/c++/5/ccomplex:38,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:52,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/ostream:497:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+     ^
+/usr/include/c++/5/ostream:497:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   deduced conflicting types for parameter ‘_CharT’ (‘char’ and ‘void’)
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/c++/5/istream:39:0,
+                 from /usr/include/c++/5/sstream:38,
+                 from /usr/include/c++/5/complex:45,
+                 from /usr/include/c++/5/ccomplex:38,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:52,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/ostream:502:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+     ^
+/usr/include/c++/5/ostream:502:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:18: note:   cannot convert ‘solve(0, 0, 0)’ (type ‘void’) to type ‘char’
+     cout << solve(0, 0, 0) << endl;
+                  ^
+In file included from /usr/include/c++/5/istream:39:0,
+                 from /usr/include/c++/5/sstream:38,
+                 from /usr/include/c++/5/complex:45,
+                 from /usr/include/c++/5/ccomplex:38,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:52,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/ostream:508:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
+     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+     ^
+/usr/include/c++/5/ostream:508:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:18: note:   cannot convert ‘solve(0, 0, 0)’ (type ‘void’) to type ‘char’
+     cout << solve(0, 0, 0) << endl;
+                  ^
+In file included from /usr/include/c++/5/istream:39:0,
+                 from /usr/include/c++/5/sstream:38,
+                 from /usr/include/c++/5/complex:45,
+                 from /usr/include/c++/5/ccomplex:38,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:52,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/ostream:514:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
+     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+     ^
+/usr/include/c++/5/ostream:514:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:18: note:   cannot convert ‘solve(0, 0, 0)’ (type ‘void’) to type ‘signed char’
+     cout << solve(0, 0, 0) << endl;
+                  ^
+In file included from /usr/include/c++/5/istream:39:0,
+                 from /usr/include/c++/5/sstream:38,
+                 from /usr/include/c++/5/complex:45,
+                 from /usr/include/c++/5/ccomplex:38,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:52,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/ostream:519:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
+     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+     ^
+/usr/include/c++/5/ostream:519:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:18: note:   cannot convert ‘solve(0, 0, 0)’ (type ‘void’) to type ‘unsigned char’
+     cout << solve(0, 0, 0) << endl;
+                  ^
+In file included from /usr/include/c++/5/istream:39:0,
+                 from /usr/include/c++/5/sstream:38,
+                 from /usr/include/c++/5/complex:45,
+                 from /usr/include/c++/5/ccomplex:38,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:52,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/ostream:539:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+     ^
+/usr/include/c++/5/ostream:539:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   mismatched types ‘const _CharT*’ and ‘void’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/c++/5/ostream:638:0,
+                 from /usr/include/c++/5/istream:39,
+                 from /usr/include/c++/5/sstream:38,
+                 from /usr/include/c++/5/complex:45,
+                 from /usr/include/c++/5/ccomplex:38,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:52,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/ostream.tcc:321:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+     ^
+/usr/include/c++/5/bits/ostream.tcc:321:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:18: note:   cannot convert ‘solve(0, 0, 0)’ (type ‘void’) to type ‘const char*’
+     cout << solve(0, 0, 0) << endl;
+                  ^
+In file included from /usr/include/c++/5/istream:39:0,
+                 from /usr/include/c++/5/sstream:38,
+                 from /usr/include/c++/5/complex:45,
+                 from /usr/include/c++/5/ccomplex:38,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:52,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/ostream:556:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+     ^
+/usr/include/c++/5/ostream:556:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:18: note:   cannot convert ‘solve(0, 0, 0)’ (type ‘void’) to type ‘const char*’
+     cout << solve(0, 0, 0) << endl;
+                  ^
+In file included from /usr/include/c++/5/istream:39:0,
+                 from /usr/include/c++/5/sstream:38,
+                 from /usr/include/c++/5/complex:45,
+                 from /usr/include/c++/5/ccomplex:38,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:52,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/ostream:569:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+     ^
+/usr/include/c++/5/ostream:569:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:18: note:   cannot convert ‘solve(0, 0, 0)’ (type ‘void’) to type ‘const signed char*’
+     cout << solve(0, 0, 0) << endl;
+                  ^
+In file included from /usr/include/c++/5/istream:39:0,
+                 from /usr/include/c++/5/sstream:38,
+                 from /usr/include/c++/5/complex:45,
+                 from /usr/include/c++/5/ccomplex:38,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:52,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/ostream:574:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+     ^
+/usr/include/c++/5/ostream:574:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:18: note:   cannot convert ‘solve(0, 0, 0)’ (type ‘void’) to type ‘const unsigned char*’
+     cout << solve(0, 0, 0) << endl;
+                  ^
+In file included from /usr/include/c++/5/istream:39:0,
+                 from /usr/include/c++/5/sstream:38,
+                 from /usr/include/c++/5/complex:45,
+                 from /usr/include/c++/5/ccomplex:38,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:52,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/ostream:628:5: note: candidate: template<class _CharT, class _Traits, class _Tp> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&&, const _Tp&)
+     operator<<(basic_ostream<_CharT, _Traits>&& __os, const _Tp& __x)
+     ^
+/usr/include/c++/5/ostream:628:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/5/ostream: In substitution of ‘template<class _CharT, class _Traits, class _Tp> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&&, const _Tp&) [with _CharT = char; _Traits = std::char_traits<char>; _Tp = void]’:
+11195-Another-n-Queen-Problem.cpp:52:26:   required from here
+/usr/include/c++/5/ostream:628:5: error: forming reference to void
+In file included from /usr/include/c++/5/ccomplex:38:0,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:52,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/complex:526:5: note: candidate: template<class _Tp, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::complex<_Tp>&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, const complex<_Tp>& __x)
+     ^
+/usr/include/c++/5/complex:526:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   mismatched types ‘const std::complex<_Tp>’ and ‘void’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/c++/5/random:49:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:64,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/random.h:1269:5: note: candidate: template<class _RandomNumberEngine, long unsigned int __w, class _UIntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::independent_bits_engine<_RandomNumberEngine, __w, _UIntType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5/bits/random.h:1269:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   mismatched types ‘const std::independent_bits_engine<_RandomNumberEngine, __w, _UIntType>’ and ‘void’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/c++/5/random:51:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:64,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/random.tcc:477:5: note: candidate: template<class _UIntType1, long unsigned int __w1, long unsigned int __n1, long unsigned int __m1, long unsigned int __r1, _UIntType1 __a1, long unsigned int __u1, _UIntType1 __d1, long unsigned int __s1, _UIntType1 __b1, long unsigned int __t1, _UIntType1 __c1, long unsigned int __l1, _UIntType1 __f1, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::mersenne_twister_engine<_UIntType, __w, __n, __m, __r, __a, __u, __d, __s, __b, __t, __c, __l, __f>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5/bits/random.tcc:477:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   mismatched types ‘const std::mersenne_twister_engine<_UIntType, __w, __n, __m, __r, __a, __u, __d, __s, __b, __t, __c, __l, __f>’ and ‘void’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/c++/5/random:51:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:64,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/random.tcc:877:5: note: candidate: template<class _IntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::uniform_int_distribution<_IntType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5/bits/random.tcc:877:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   mismatched types ‘const std::uniform_int_distribution<_IntType>’ and ‘void’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/c++/5/random:51:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:64,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/random.tcc:936:5: note: candidate: template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::uniform_real_distribution<_IntType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5/bits/random.tcc:936:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   mismatched types ‘const std::uniform_real_distribution<_IntType>’ and ‘void’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/c++/5/random:51:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:64,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/random.tcc:2123:5: note: candidate: template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::cauchy_distribution<_RealType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5/bits/random.tcc:2123:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   mismatched types ‘const std::cauchy_distribution<_RealType>’ and ‘void’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/c++/5/random:51:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:64,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/random.tcc:998:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::bernoulli_distribution&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5/bits/random.tcc:998:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:18: note:   cannot convert ‘solve(0, 0, 0)’ (type ‘void’) to type ‘const std::bernoulli_distribution&’
+     cout << solve(0, 0, 0) << endl;
+                  ^
+In file included from /usr/include/c++/5/random:51:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:64,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/random.tcc:1898:5: note: candidate: template<class _RealType1, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::normal_distribution<_RealType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5/bits/random.tcc:1898:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   mismatched types ‘const std::normal_distribution<_RealType>’ and ‘void’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/c++/5/random:51:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:64,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/random.tcc:1080:5: note: candidate: template<class _IntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::geometric_distribution<_IntType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5/bits/random.tcc:1080:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   mismatched types ‘const std::geometric_distribution<_IntType>’ and ‘void’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/c++/5/random:51:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:64,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/random.tcc:2444:5: note: candidate: template<class _RealType1, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::gamma_distribution<_RealType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5/bits/random.tcc:2444:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   mismatched types ‘const std::gamma_distribution<_RealType>’ and ‘void’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/c++/5/random:51:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:64,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/random.tcc:1731:5: note: candidate: template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::exponential_distribution<_RealType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5/bits/random.tcc:1731:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   mismatched types ‘const std::exponential_distribution<_RealType>’ and ‘void’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/c++/5/random:51:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:64,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/random.tcc:2522:5: note: candidate: template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::weibull_distribution<_RealType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5/bits/random.tcc:2522:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   mismatched types ‘const std::weibull_distribution<_RealType>’ and ‘void’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/c++/5/random:51:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:64,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/random.tcc:2598:5: note: candidate: template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::extreme_value_distribution<_RealType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5/bits/random.tcc:2598:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   mismatched types ‘const std::extreme_value_distribution<_RealType>’ and ‘void’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/c++/5/random:51:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:64,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/random.tcc:156:5: note: candidate: template<class _UIntType, _UIntType __a, _UIntType __c, _UIntType __m, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::linear_congruential_engine<_UIntType, __a, __c, __m>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5/bits/random.tcc:156:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   mismatched types ‘const std::linear_congruential_engine<_UIntType, __a, __c, __m>’ and ‘void’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/c++/5/random:51:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:64,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/random.tcc:632:5: note: candidate: template<class _UIntType, long unsigned int __w, long unsigned int __s, long unsigned int __r, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::subtract_with_carry_engine<_UIntType, __w, __s, __r>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5/bits/random.tcc:632:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   mismatched types ‘const std::subtract_with_carry_engine<_UIntType, __w, __s, __r>’ and ‘void’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/c++/5/random:51:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:64,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/random.tcc:702:5: note: candidate: template<class _RandomNumberEngine, long unsigned int __p, long unsigned int __r, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::discard_block_engine<_RandomNumberEngine, __p, __r>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5/bits/random.tcc:702:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   mismatched types ‘const std::discard_block_engine<_RandomNumberEngine, __p, __r>’ and ‘void’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/c++/5/random:51:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:64,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/random.tcc:831:5: note: candidate: template<class _RandomNumberEngine, long unsigned int __k, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::shuffle_order_engine<_RandomNumberEngine, __k>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5/bits/random.tcc:831:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   mismatched types ‘const std::shuffle_order_engine<_RandomNumberEngine, __k>’ and ‘void’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/c++/5/random:51:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:64,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/random.tcc:1195:5: note: candidate: template<class _IntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::negative_binomial_distribution<_IntType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5/bits/random.tcc:1195:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   mismatched types ‘const std::negative_binomial_distribution<_IntType>’ and ‘void’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/c++/5/random:51:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:64,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/random.tcc:1400:5: note: candidate: template<class _IntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::poisson_distribution<_IntType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5/bits/random.tcc:1400:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   mismatched types ‘const std::poisson_distribution<_IntType>’ and ‘void’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/c++/5/random:51:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:64,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/random.tcc:1667:5: note: candidate: template<class _IntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::binomial_distribution<_IntType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5/bits/random.tcc:1667:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   mismatched types ‘const std::binomial_distribution<_IntType>’ and ‘void’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/c++/5/random:51:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:64,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/random.tcc:1963:5: note: candidate: template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::lognormal_distribution<_RealType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5/bits/random.tcc:1963:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   mismatched types ‘const std::lognormal_distribution<_RealType>’ and ‘void’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/c++/5/random:51:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:64,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/random.tcc:2036:5: note: candidate: template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::chi_squared_distribution<_RealType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5/bits/random.tcc:2036:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   mismatched types ‘const std::chi_squared_distribution<_RealType>’ and ‘void’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/c++/5/random:51:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:64,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/random.tcc:2200:5: note: candidate: template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::fisher_f_distribution<_RealType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5/bits/random.tcc:2200:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   mismatched types ‘const std::fisher_f_distribution<_RealType>’ and ‘void’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/c++/5/random:51:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:64,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/random.tcc:2275:5: note: candidate: template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::student_t_distribution<_RealType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5/bits/random.tcc:2275:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   mismatched types ‘const std::student_t_distribution<_RealType>’ and ‘void’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/c++/5/random:51:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:64,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/random.tcc:2734:5: note: candidate: template<class _IntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::discrete_distribution<_IntType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5/bits/random.tcc:2734:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   mismatched types ‘const std::discrete_distribution<_IntType>’ and ‘void’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/c++/5/random:51:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:64,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/random.tcc:2944:5: note: candidate: template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::piecewise_constant_distribution<_RealType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5/bits/random.tcc:2944:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   mismatched types ‘const std::piecewise_constant_distribution<_RealType>’ and ‘void’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/c++/5/random:51:0,
+                 from /usr/include/c++/5/bits/stl_algo.h:66,
+                 from /usr/include/c++/5/algorithm:62,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:64,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/random.tcc:3160:5: note: candidate: template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::piecewise_linear_distribution<_RealType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5/bits/random.tcc:3160:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   mismatched types ‘const std::piecewise_linear_distribution<_RealType>’ and ‘void’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:65:0,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bitset:1530:5: note: candidate: template<class _CharT, class _Traits, long unsigned int _Nb> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::bitset<_Nb>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5/bitset:1530:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   mismatched types ‘const std::bitset<_Nb>’ and ‘void’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:71:0,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/iomanip:79:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Resetiosflags)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Resetiosflags __f)
+     ^
+/usr/include/c++/5/iomanip:79:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:18: note:   cannot convert ‘solve(0, 0, 0)’ (type ‘void’) to type ‘std::_Resetiosflags’
+     cout << solve(0, 0, 0) << endl;
+                  ^
+In file included from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:71:0,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/iomanip:109:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setiosflags)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setiosflags __f)
+     ^
+/usr/include/c++/5/iomanip:109:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:18: note:   cannot convert ‘solve(0, 0, 0)’ (type ‘void’) to type ‘std::_Setiosflags’
+     cout << solve(0, 0, 0) << endl;
+                  ^
+In file included from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:71:0,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/iomanip:143:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setbase)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setbase __f)
+     ^
+/usr/include/c++/5/iomanip:143:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:18: note:   cannot convert ‘solve(0, 0, 0)’ (type ‘void’) to type ‘std::_Setbase’
+     cout << solve(0, 0, 0) << endl;
+                  ^
+In file included from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:71:0,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/iomanip:178:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setfill<_CharT>)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setfill<_CharT> __f)
+     ^
+/usr/include/c++/5/iomanip:178:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   mismatched types ‘std::_Setfill<_CharT>’ and ‘void’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:71:0,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/iomanip:208:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setprecision)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setprecision __f)
+     ^
+/usr/include/c++/5/iomanip:208:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:18: note:   cannot convert ‘solve(0, 0, 0)’ (type ‘void’) to type ‘std::_Setprecision’
+     cout << solve(0, 0, 0) << endl;
+                  ^
+In file included from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:71:0,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/iomanip:238:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setw)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setw __f)
+     ^
+/usr/include/c++/5/iomanip:238:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:18: note:   cannot convert ‘solve(0, 0, 0)’ (type ‘void’) to type ‘std::_Setw’
+     cout << solve(0, 0, 0) << endl;
+                  ^
+In file included from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:71:0,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/iomanip:311:5: note: candidate: template<class _CharT, class _Traits, class _MoneyT> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Put_money<_MoneyT>)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Put_money<_MoneyT> __f)
+     ^
+/usr/include/c++/5/iomanip:311:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   mismatched types ‘std::_Put_money<_MoneyT>’ and ‘void’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:71:0,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/iomanip:363:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Put_time<_CharT>)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Put_time<_CharT> __f)
+     ^
+/usr/include/c++/5/iomanip:363:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   mismatched types ‘std::_Put_time<_CharT>’ and ‘void’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/c++/5/memory:82:0,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:81,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/shared_ptr.h:66:5: note: candidate: template<class _Ch, class _Tr, class _Tp, __gnu_cxx::_Lock_policy _Lp> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__shared_ptr<_Tp, _Lp>&)
+     operator<<(std::basic_ostream<_Ch, _Tr>& __os,
+     ^
+/usr/include/c++/5/bits/shared_ptr.h:66:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   mismatched types ‘const std::__shared_ptr<_Tp, _Lp>’ and ‘void’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/c++/5/valarray:587:0,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:94,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/valarray_after.h:410:5: note: candidate: template<class _Dom1, class _Dom2> std::_Expr<std::_BinClos<std::__shift_left, std::_Expr, std::_Expr, _Dom1, _Dom2>, typename std::__fun<std::__shift_left, typename _Dom1::value_type>::result_type> std::operator<<(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::_Expr<_Dom2, typename _Dom2::value_type>&)
+     _DEFINE_EXPR_BINARY_OPERATOR(<<, __shift_left)
+     ^
+/usr/include/c++/5/bits/valarray_after.h:410:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   ‘std::ostream {aka std::basic_ostream<char>}’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/c++/5/valarray:587:0,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:94,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/valarray_after.h:410:5: note: candidate: template<class _Dom> std::_Expr<std::_BinClos<std::__shift_left, std::_Expr, std::_Constant, _Dom, typename _Dom::value_type>, typename std::__fun<std::__shift_left, typename _Dom1::value_type>::result_type> std::operator<<(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const typename _Dom::value_type&)
+     _DEFINE_EXPR_BINARY_OPERATOR(<<, __shift_left)
+     ^
+/usr/include/c++/5/bits/valarray_after.h:410:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   ‘std::ostream {aka std::basic_ostream<char>}’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/c++/5/valarray:587:0,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:94,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/valarray_after.h:410:5: note: candidate: template<class _Dom> std::_Expr<std::_BinClos<std::__shift_left, std::_Constant, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__shift_left, typename _Dom1::value_type>::result_type> std::operator<<(const typename _Dom::value_type&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)
+     _DEFINE_EXPR_BINARY_OPERATOR(<<, __shift_left)
+     ^
+/usr/include/c++/5/bits/valarray_after.h:410:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   mismatched types ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’ and ‘void’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/c++/5/valarray:587:0,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:94,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/valarray_after.h:410:5: note: candidate: template<class _Dom> std::_Expr<std::_BinClos<std::__shift_left, std::_Expr, std::_ValArray, _Dom, typename _Dom::value_type>, typename std::__fun<std::__shift_left, typename _Dom1::value_type>::result_type> std::operator<<(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::valarray<typename _Dom::value_type>&)
+     _DEFINE_EXPR_BINARY_OPERATOR(<<, __shift_left)
+     ^
+/usr/include/c++/5/bits/valarray_after.h:410:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   ‘std::ostream {aka std::basic_ostream<char>}’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/c++/5/valarray:587:0,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:94,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/valarray_after.h:410:5: note: candidate: template<class _Dom> std::_Expr<std::_BinClos<std::__shift_left, std::_ValArray, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__shift_left, typename _Dom1::value_type>::result_type> std::operator<<(const std::valarray<typename _Dom::value_type>&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)
+     _DEFINE_EXPR_BINARY_OPERATOR(<<, __shift_left)
+     ^
+/usr/include/c++/5/bits/valarray_after.h:410:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   mismatched types ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’ and ‘void’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:94:0,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/valarray:1175:1: note: candidate: template<class _Tp> std::_Expr<std::_BinClos<std::__shift_left, std::_ValArray, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__shift_left, _Tp>::result_type> std::operator<<(const std::valarray<_Tp>&, const std::valarray<_Tp>&)
+ _DEFINE_BINARY_OPERATOR(<<, __shift_left)
+ ^
+/usr/include/c++/5/valarray:1175:1: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   ‘std::ostream {aka std::basic_ostream<char>}’ is not derived from ‘const std::valarray<_Tp>’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:94:0,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/valarray:1175:1: note: candidate: template<class _Tp> std::_Expr<std::_BinClos<std::__shift_left, std::_ValArray, std::_Constant, _Tp, _Tp>, typename std::__fun<std::__shift_left, _Tp>::result_type> std::operator<<(const std::valarray<_Tp>&, const _Tp&)
+ _DEFINE_BINARY_OPERATOR(<<, __shift_left)
+ ^
+/usr/include/c++/5/valarray:1175:1: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   ‘std::ostream {aka std::basic_ostream<char>}’ is not derived from ‘const std::valarray<_Tp>’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:94:0,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/valarray:1175:1: note: candidate: template<class _Tp> std::_Expr<std::_BinClos<std::__shift_left, std::_Constant, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__shift_left, _Tp>::result_type> std::operator<<(const _Tp&, const std::valarray<_Tp>&)
+ _DEFINE_BINARY_OPERATOR(<<, __shift_left)
+ ^
+/usr/include/c++/5/valarray:1175:1: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   mismatched types ‘const std::valarray<_Tp>’ and ‘void’
+     cout << solve(0, 0, 0) << endl;
+                          ^
+In file included from /usr/include/c++/5/future:40:0,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:103,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/thread:243:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::thread::id)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, thread::id __id)
+     ^
+/usr/include/c++/5/thread:243:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:18: note:   cannot convert ‘solve(0, 0, 0)’ (type ‘void’) to type ‘std::thread::id’
+     cout << solve(0, 0, 0) << endl;
+                  ^
+In file included from /usr/include/c++/5/regex:61:0,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:108,
+                 from 11195-Another-n-Queen-Problem.cpp:2:
+/usr/include/c++/5/bits/regex.h:1480:5: note: candidate: template<class _Ch_type, class _Ch_traits, class _Bi_iter> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::sub_match<_Bi_iter>&)
+     operator<<(basic_ostream<_Ch_type, _Ch_traits>& __os,
+     ^
+/usr/include/c++/5/bits/regex.h:1480:5: note:   template argument deduction/substitution failed:
+11195-Another-n-Queen-Problem.cpp:52:26: note:   mismatched types ‘const std::sub_match<_Bi_iter>’ and ‘void’
+     cout << solve(0, 0, 0) << endl;
+                          ^
