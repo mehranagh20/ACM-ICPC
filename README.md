@@ -1,5 +1,4 @@
-```
-Solutions to some of my solved problems for acm practicing during contests and competitions.
-```
+## Solutions of some of my solved problems in uva, codeforces, regionals etc.
+### Star if it was useful
 
-### Star if it was useful :)
+#### Contact me at mehranagh200@gmail.com
