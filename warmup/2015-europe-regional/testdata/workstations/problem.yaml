@@ -1,9 +1,0 @@
-source: Northwestern Europe Regional Contest (NWERC) 2015
-# source-url:
-author: Stefan Toman
-# rights_owner:
-license: cc by-sa
-
-limits:
-    time_multiplier: 2.5
-    time_safety_margin: 2
