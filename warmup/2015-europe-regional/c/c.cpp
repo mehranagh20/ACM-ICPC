@@ -32,6 +32,12 @@ typedef vector<ddd> vddd;
 
 int main() {
     ios::sync_with_stdio(0);
+    ll n, t, p;
+    while(cin >> n >> t >> p) {
+        ll k = max(1LL, min(t / p, n - 1));
+        ll need = ceil(log(n) / log(k + 1));
+        cout << need * t + need * k * p << endl;
+    }
 
 
     return 0;

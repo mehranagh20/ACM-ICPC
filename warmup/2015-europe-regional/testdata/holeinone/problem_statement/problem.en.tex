@@ -1,0 +1,43 @@
+\problemname{Hole in One}
+
+Janine recently went to her local game store and bought ``Hole in One'', a new mini-golf game for her computer. As indicated by the name, the objective of the game is to shoot a ball into a hole using just one shot. The game also borrows elements from brick breaker style games: in the playing field, several walls are placed that will be destroyed upon being hit by the ball.  The score of a successful shot depends on the number of destroyed walls, so Janine wonders: what is the maximum number of walls that can be hit while performing a ``Hole in One''?
+
+For the purposes of this problem you can think of the playing field as a cartesian plane with the initial position of the ball at the origin. The walls are non-intersecting axis-parallel line segments in this plane (i.e., parallel to either the $x$ axis or the $y$ axis).  The diameter of the ball is negligible so it is represented as a single point.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.55\textwidth]{sample-illustration-new.png}
+	\begin{minipage}[c]{0.82\textwidth}
+		\caption{Illustration of the first sample input: The ball first bounces off two walls
+		at points 1 and 2. When it passes point 3 the wall has already vanished.}
+	\end{minipage}
+\end{figure}
+
+Whenever the ball hits a wall, two things happen:
+\begin{itemize}
+\item The direction of the ball changes in the usual way: the angle of incidence equals the angle of reflection.
+\item The wall that the ball touched is destroyed. Following common video game logic, no rubble of the wall remains; it will be as though it vanished.
+\end{itemize}
+
+The behaviour of the ball is also affected by the power of the
+shot.  In particular, an optimal shot may need to first roll over the
+hole, then hit some more walls, and only later drop into the hole.
+
+\section*{Input}
+
+The input consists of:
+\begin{itemize}
+\item one line with one integer $n$ ($0 \le n \le 8$), the number of walls;
+\item one line with two integers $x$ and $y$, the coordinates of the hole;
+\item $n$ lines each with four integers $x_1$, $y_1$, $x_2$, and $y_2$ (either $x_1 = x_2$, or $y_1 = y_2$, but not both), representing a wall with end points $(x_1, y_1)$ and $(x_2, y_2)$.
+\end{itemize}
+
+The hole is not at the origin and not on a wall.  The walls do not
+touch or intersect each other.  No wall lies completely on the $x$
+axis or the $y$ axis.
+All coordinates in the input are integers with absolute value at most $1\,000$.
+
+\section*{Output}
+
+If there is no way to shoot the ball such that it reaches the hole, print ``\texttt{impossible}''.
+Otherwise, print the maximum number of walls that can be destroyed in a single ``Hole in One'' shot.
+

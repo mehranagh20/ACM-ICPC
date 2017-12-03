@@ -1,0 +1,16 @@
+source: Northwestern Europe Regional Contest (NWERC) 2015
+source_url: http://www.nwerc.eu/
+author: Lukáš Poláček
+license: cc by-sa
+
+limits:
+   time_safety_margin: 2
+   time_multiplier: 1.3
+#    memory: 4096
+#    output: 16
+#    compilation_time: 240
+#    validation_time: 240
+#    validation_memory: 3072
+#    validation_output: 4
+#validator_flags: space_change_sensitive float_absolute_tolerance 1e-6
+#validation: custom

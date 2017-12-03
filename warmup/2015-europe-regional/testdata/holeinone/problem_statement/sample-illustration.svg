@@ -1,0 +1,15 @@
+<svg height="562" width="1024">
+<line x1="50.000000" y1="512.000000" x2="743.000000" y2="281.000000" style="stroke:green;stroke-width:3.5" />
+<line x1="743.000000" y1="281.000000" x2="512.000000" y2="204.000000" style="stroke:green;stroke-width:3.5" />
+<line x1="512.000000" y1="204.000000" x2="974.000000" y2="50.000000" style="stroke:green;stroke-width:3.5" />
+<line x1="281.000000" y1="281.000000" x2="281.000000" y2="50.000000" style="stroke:red;stroke-width:3.5" />
+<line x1="512.000000" y1="281.000000" x2="512.000000" y2="50.000000" style="stroke:red;stroke-width:3.5" />
+<line x1="743.000000" y1="281.000000" x2="743.000000" y2="50.000000" style="stroke:red;stroke-width:3.5" />
+<circle cx="50.000000" cy="512.000000" r="10" fill="blue" />
+<text x="50.000000" y="512.000000" fill="black" font-size="20" transform="translate(-22,-12)">Ball</text>
+<circle cx="974.000000" cy="50.000000" r="10" fill="blue" />
+<text x="974.000000" y="50.000000" fill="black" font-size="20" transform="translate(-22,-12)">Hole</text>
+<text x="743.000000" y="281.000000" fill="black" font-size="20" transform="translate(-20,-10)">1</text>
+<text x="512.000000" y="204.000000" fill="black" font-size="20" transform="translate(-20,-10)">2</text>
+<text x="743.000000" y="127.000000" fill="black" font-size="20" transform="translate(-20,-10)">3</text>
+</svg>

@@ -1,0 +1,5 @@
+INT(1, 10^5, n) NEWLINE
+REP(n, SPACE)
+    INT(0,255)
+END
+NEWLINE

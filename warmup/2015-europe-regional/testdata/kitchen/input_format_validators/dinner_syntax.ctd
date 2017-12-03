@@ -1,0 +1,22 @@
+INT(1, 1000, r) SPACE INT(1, 25, s) SPACE INT(1, 25, m) SPACE INT(1, 25, d) SPACE INT(0, 2000, n) NEWLINE
+REP(r, SPACE) INT(1, 100) END NEWLINE
+REP(s+m+d)
+	INT(1, 20, k)
+	REPI(i, k) SPACE INT(1, r, ingred[i]) END
+	NEWLINE
+	ASSERT(UNIQUE(ingred))
+	UNSET(ingred)
+END
+REPI(i, n)
+	INT(1,s+m+d, j1[i]) SPACE
+	INT(1,s+m+d, j2[i]) NEWLINE
+	ASSERT(!(j1[i] <= s && j2[i] <= s) &&
+		   !(s < j1[i] && j1[i] <= s+m && s < j2[i] && j2[i] <= s+m) &&
+		   !(s+m < j1[i] && j1[i] <= s+m+d && s+m < j2[i] && j2[i] <= s+m+d))
+	IF(j1[i] > j2[i])
+		SET(tmp=j1[i])
+		SET(j1[i]=j2[i])
+		SET(j2[i]=tmp)
+	END
+END
+ASSERT(n == 0 || UNIQUE(j1, j2))

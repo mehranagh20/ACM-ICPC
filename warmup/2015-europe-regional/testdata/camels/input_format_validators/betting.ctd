@@ -1,0 +1,9 @@
+INT(2,200000,n) NEWLINE
+REP(3)
+	REPI(i,n,SPACE)
+		INT(1, n, bets[i])
+	END
+	NEWLINE
+	ASSERT( UNIQUE(bets) )
+	UNSET(bets)
+END

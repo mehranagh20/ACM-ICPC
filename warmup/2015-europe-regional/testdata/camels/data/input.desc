@@ -1,0 +1,14 @@
+normal random 10 100
+normal random 10 100
+normal random 10 1000
+normal random 100 1000
+normal random 100 1000
+normal random 10000 100000
+normal random 10000 100000
+normal random 10000 100000
+normal exactly 100000
+normal exactly 100000
+normal exactly 100000
+normal exactly 200000
+normal exactly 200000
+normal exactly 200000

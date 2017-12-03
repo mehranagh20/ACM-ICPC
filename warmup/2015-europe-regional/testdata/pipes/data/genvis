@@ -1,0 +1,5 @@
+#!/bin/bash
+
+for i in s*/*in; do
+	cat $i | asy -f png -o ${i%.in}.png pipes.asy
+done

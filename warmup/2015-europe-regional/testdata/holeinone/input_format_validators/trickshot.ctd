@@ -1,0 +1,9 @@
+INT(0,8,n) NEWLINE
+INT(-1000,1000,tx) SPACE INT(-1000,1000,ty) NEWLINE
+ASSERT(tx != 0 || ty != 0)
+REP(n)
+	INT(-1000,1000,vx) SPACE INT(-1000,1000,vy) SPACE
+	INT(-1000,1000,wx) SPACE INT(-1000,1000,wy) NEWLINE
+	ASSERT((vx == wx && vy != wy) || (vx != wx && vy == wy))
+END
+EOF
