@@ -30,21 +30,29 @@ typedef vector<ddd> vddd;
 #define inf 1000000000
 #define eps 1e-9
 
+ll n, k;
+vector<vector<ll>> memo;
+vector<ll> nums;
+
+ll solve(int i, int w) {
+    if(i >= n) return 0;
+    ll &ans = memo[i][w];
+    if(ans != -1) return ans;
+    ans = solve(i + 1, w == 0 ? 0 : w - 1);
+    ans = max(ans, solve(i + 2, 0));
+    ll r = k;
+    for(int i = 0; i < w; i++) r = ((double)r * (2./3.));
+    ans = max(ans, solve(i + 1, w + 1) + min(r, nums[i]));
+    return ans;
+}
+
 int main() {
     ios::sync_with_stdio(0);
-    string str;
-    while(cin >> str) {
-        int x = 0, y = 0;
-        int n = 1 << str.size();
-        for(int i = 0; i < str.size(); i++) {
-            if(str[i] == '1') y += n / 2;
-            if(str[i] == '2') x += n / 2;
-            if(str[i] == '3') x += n / 2, y += n / 2;
-            n /= 2;
-        }
-        cout << str.size() << " " << y << " " << x << endl;
-    }
-
+    cin >> n >> k;
+    nums.assign(n, 0);
+    for(auto &e: nums) cin >> e;
+    memo.assign(n + 10, vector<ll>(k + 10, -1));
+    cout << solve(0, 0) << endl;
 
     return 0;
 }

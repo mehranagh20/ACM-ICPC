@@ -32,6 +32,17 @@ typedef vector<ddd> vddd;
 
 int main() {
     ios::sync_with_stdio(0);
+    string str; cin >> str;
+    string n = str.substr(0, str.size() / 2), nn = str.substr(str.size() / 2, str.size());
+    int sum = 0, s2 = 0;
+    for(auto &e: n) sum += e - 'A';
+    for(auto &e: nn) s2 += e - 'A';
+
+    for(auto &e: n) e = (((e - 'A') + sum) % 26) + 'A';
+    for(auto &e: nn) e = (((e - 'A') + s2) % 26) + 'A';
+    for(int i = 0; i < str.size() / 2; i++)
+        n[i] = (((n[i] - 'A') + (nn[i] - 'A')) % 26) + 'A';
+    cout << n << endl;
 
 
     return 0;

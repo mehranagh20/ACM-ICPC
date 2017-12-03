@@ -32,27 +32,27 @@ typedef vector<ddd> vddd;
 
 int main() {
     ios::sync_with_stdio(0);
-    int n;
-    // while(cin >> n){
-    cin >> n;
-        while(n--){
-            int t; cin >> t;
-
-            bitset<8> ans(t), num1(0), num2(0);
-
-            int i = 0;
-            while(i != 8){
-                num1[i] = ans[i] ^ num2[i];
-                if(i < 8)
-                    num2[i + 1] = num1[i];
-                i++;
+    vii mine(10), oth(10);
+    vi time(10);
+    for(auto &e: mine) cin >> e.first >> e.second;
+    for(int i = 0; i < 10; i++) cin >> oth[i].first >> oth[i].second >> time[i];
+    int t = 0;
+    for(int i = 0; i < 3; i++) {
+        for(int i = 0; i < 10; i++) {
+            if(t < time[i]) {
+                time[i] = max(time[i], t + mine[i].first);
+                t += mine[i].first + mine[i].second;
             }
-
-            cout << num1.to_ullong();
-            if(n) cout << ' ';
+            else {
+                int r = (t - time[i]) / (oth[i].first + oth[i].second);
+                int tt = max(t, time[i] + r * (oth[i].first + oth[i].second) + oth[i].first);
+                t = tt + mine[i].first + mine[i].second;
+                time[i] = max(time[i] + (r + 1) * (oth[i].first + oth[i].second), t - mine[i].second);
+            }
         }
-        cout << endl;
-    // }
+    }
+    cout << t - mine[9].second << endl;
+
 
     return 0;
 }

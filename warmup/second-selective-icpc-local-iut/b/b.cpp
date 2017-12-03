@@ -32,32 +32,29 @@ typedef vector<ddd> vddd;
 
 int main() {
     ios::sync_with_stdio(0);
-
-    int n, m;
-    while(cin >> n >> m) {
-        priority_queue<ii, vector<ii>, greater<ii> > q;
-        int ans = 0;
-        vii nums;
-        for (int j = 0; j < n; ++j) {
-            int a, b; cin >> a >> b;
-            nums.push_back(ii(a, b));
-        }
-        sort(nums.begin(), nums.end());
-        for(int i = 0; i < n; i++) {
-            int a = nums[i].first, b = nums[i].second;
-            while(q.size() && q.top().first < a) q.pop();
-            if(q.size() && q.top().second > a) {
-                ans++;
+    int n, t; cin >> n >> t;
+    vi nums;
+    int ans = 0;
+    for(int i = 0; i < t; i++) {
+        string str; cin >> str;
+        int sec;
+        if(str[0] == 'u') {
+            cin >> sec;
+            while(sec--) {
+                int d = nums.back();
+                ans = (ans - d) % n;
+                ans = (ans + n) % n;
+                nums.pop_back();
             }
-            else if(q.size()) {
-                q.pop();
-            }
-            else if(!q.size()) ans++;
-            q.push(ii(a + b + m, a + b));
         }
-        cout << n - ans << endl;
+        else {
+            sec = stoi(str);
+            ans += (sec) % n;
+            ans = (ans + n) % n;
+            nums.push_back(sec);
+        }
     }
-
+    cout << ans << endl;
 
 
     return 0;
