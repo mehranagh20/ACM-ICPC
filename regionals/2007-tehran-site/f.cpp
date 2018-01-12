@@ -110,6 +110,7 @@ int main() {
                 }
             }
         }
+        
         vs tmp;
         while(true) {
             bool found = false;
@@ -119,7 +120,6 @@ int main() {
                     all.insert(ee);
                 }
             }
-
             if(!found) break;
         }
 
@@ -132,5 +132,4 @@ int main() {
         for(int i = 1; i < tmp.size(); i++) cout << " " << tmp[i];
         cout << endl;
     }
-
 }

@@ -49,11 +49,8 @@ void calc_hash(string &str) {
 }
 
 ll sub_hash(int a, int b) {
-    if(b >= h.size()) {
-        cout << "wtf" << endl;
-        exit(0);
-    }
-    return (h[b] - h[a - 1] * p[b - a + 1]) % mod;
+    ll ret = (h[b] - h[a - 1] * p[b - a + 1]) % mod;
+    return (ret + mod) % mod;
 }
 
 bool check(int a, int b, int c, string &str) {
@@ -65,7 +62,6 @@ bool check(int a, int b, int c, string &str) {
     ll h1 = sub_hash(1, a);
     ll h2 = sub_hash(a + 1, a + b);
     ll h3 = sub_hash(a + b + 1, a + b + c);
-    h1 = (h1 + mod) % mod, h2 = (h2 + mod) % mod, h3 = (h3 + mod) % mod;
     if((h1 + h2) % mod == h3) return true;
     return false;
 }

@@ -1,0 +1,23 @@
+
+<challenge
+    id              = "neerc-2017.main"
+    name            = "ACM ICPC 2017-2018, NEERC - Northern Eurasia Finals"
+    scoring-model   = "%icpc"
+    length          = "5h"
+
+    problem-id      = "neerc.2017.main"
+    xmlai-process   = "http://neerc.ifmo.ru/develop/pcms2/xmlai/default-rules.xml"
+>
+    <problem-ref id = "a" alias = "A" problem-id = "archery" name = "Archery Tournament"/>
+    <problem-ref id = "b" alias = "B" problem-id = "box" name = "Box"/>
+    <problem-ref id = "c" alias = "C" problem-id = "connections" name = "Connections"/>
+    <problem-ref id = "d" alias = "D" problem-id = "design" name = "Designing the Toy"/>
+    <problem-ref id = "e" alias = "E" problem-id = "easy" name = "Easy Quest"/>
+    <problem-ref id = "f" alias = "F" problem-id = "final" name = "The Final Level"/>
+    <problem-ref id = "g" alias = "G" problem-id = "great" name = "The Great Wall"/>
+    <problem-ref id = "h" alias = "H" problem-id = "hack" name = "Hack"/>
+    <problem-ref id = "i" alias = "I" problem-id = "interactive" name = "Interactive Sort"/>
+    <problem-ref id = "j" alias = "J" problem-id = "journey" name = "Journey from Petersburg to Moscow"/>
+    <problem-ref id = "k" alias = "K" problem-id = "knapsack" name = "Knapsack Cryptosystem"/>
+    <problem-ref id = "l" alias = "L" problem-id = "laminarity" name = "Laminar Family"/>
+</challenge>
