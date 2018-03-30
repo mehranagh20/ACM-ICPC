@@ -36,32 +36,24 @@ typedef vector<si> vsi;
 #define S second
 #define pb push_back
 
+bool is(string a, string b) {
+    if(a.size() > b.size()) return false;
+    for (int i = 0; i < min(a.size(), b.size()); ++i)
+        if(a[i] != b[i]) return false;
+    return true;
+}
+
 int main() {
-    ios::sync_with_stdio(0);
-    ll n, w, b, x; cin >> n >> w >> b >> x;
-    ll bsum = 0;
-    vi brds(n), cost(n);
-    for(auto &e: brds) cin >> e, bsum += e;
-    for(auto &e: cost) cin >> e;
-
-    vvi dp(n + 1, vi(bsum + 10, -inf));
-    for(ll i = 0; i <= brds[0]; i++)
-        dp[1][i] = w - i * cost[0];
-
-    int til = brds[0] + brds[1];
-
-    for(ll i = 2; i <= n; i++) {
-        for(ll j = 0; j <= til; j++) {
-            for(ll k = 0; k <= min(j, brds[i - 1]); k++)
-                if(dp[i - 1][j - k] >= 0)
-                    dp[i][j] = max(dp[i][j], min(dp[i - 1][j - k] + x, w + b * (j - k)) - k * cost[i - 1]);
-        }
-        til += brds[i];
+    int n; cin >> n;
+    string s; cin >> s;
+    int ans = s.size();
+    for(int i = 1; i < s.size(); i++) {
+        string m;
+        for(int j = 0; j < i; j++) m += s[j];
+        string x = m + m;
+        if(is(x, s))
+            ans = min(ans, i + 1 + (int)(s.size() - x.size()));
     }
-
-    int ans = 0;
-    for(int i = 1; i <= bsum; i++) if(dp[n][i] >= 0)
-            ans = i;
 
     cout << ans << endl;
 

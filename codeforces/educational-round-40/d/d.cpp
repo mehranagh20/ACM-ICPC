@@ -36,33 +36,54 @@ typedef vector<si> vsi;
 #define S second
 #define pb push_back
 
-int main() {
-    ios::sync_with_stdio(0);
-    ll n, w, b, x; cin >> n >> w >> b >> x;
-    ll bsum = 0;
-    vi brds(n), cost(n);
-    for(auto &e: brds) cin >> e, bsum += e;
-    for(auto &e: cost) cin >> e;
+int n, m;
+vvi graph;
 
-    vvi dp(n + 1, vi(bsum + 10, -inf));
-    for(ll i = 0; i <= brds[0]; i++)
-        dp[1][i] = w - i * cost[0];
+vi bfs(int i) {
+    vi dis(n, inf); dis[i] = 0;
+    vi vis(n, 0); vis[i] = 1;
+    queue<int> q; q.push(i);
 
-    int til = brds[0] + brds[1];
+    while(q.size()) {
+        int cur = q.front(); q.pop();
+        for(auto &e: graph[cur]) {
+            if(!vis[e]) {
+                vis[e] = 1;
+                q.push(e);
+                dis[e] = dis[cur] + 1;
+            }
 
-    for(ll i = 2; i <= n; i++) {
-        for(ll j = 0; j <= til; j++) {
-            for(ll k = 0; k <= min(j, brds[i - 1]); k++)
-                if(dp[i - 1][j - k] >= 0)
-                    dp[i][j] = max(dp[i][j], min(dp[i - 1][j - k] + x, w + b * (j - k)) - k * cost[i - 1]);
         }
-        til += brds[i];
+
+    }
+    return dis;
+}
+
+int main() {
+    cin >> n >> m;
+    int s, t; cin >> s >> t;
+    graph.assign(n, vi());
+    vvi ed(n, vi(n, 0));
+    for(int i = 0; i < m; i++) {
+        int a, b; cin >> a >> b;
+        a--, b--;
+        graph[a].push_back(b);
+        graph[b].push_back(a);
+        ed[a][b] = ed[b][a] = 1;
     }
 
-    int ans = 0;
-    for(int i = 1; i <= bsum; i++) if(dp[n][i] >= 0)
-            ans = i;
+    s--, t--;
+    vi h = bfs(s), w = bfs(t);
 
+    int ans = 0;
+    for(int i = 0; i < n; i++) for(int j = i + 1; j < n; j++) {
+            if(!ed[i][j]) {
+                if((h[j] + w[i] + 1 >= h[t]) && (h[i] + w[j] + 1 >= h[t]))
+                    ans++;
+
+            }
+
+        }
     cout << ans << endl;
 
 

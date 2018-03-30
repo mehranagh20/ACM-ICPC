@@ -4,11 +4,12 @@
 using namespace std;
 
 typedef long long ll;
+typedef long double ld;
 typedef unsigned long long ull;
 typedef vector<string> vs;
-typedef pair<int, int> ii;
+typedef pair<ll, ll> ii;
 typedef pair<int, ii> iii;
-typedef pair<double, double> dd;
+typedef pair<ld, ld> dd;
 typedef pair<dd, double> ddd;
 typedef vector<ll> vi;
 typedef vector<vi> vvi;
@@ -36,36 +37,27 @@ typedef vector<si> vsi;
 #define S second
 #define pb push_back
 
+
 int main() {
     ios::sync_with_stdio(0);
-    ll n, w, b, x; cin >> n >> w >> b >> x;
-    ll bsum = 0;
-    vi brds(n), cost(n);
-    for(auto &e: brds) cin >> e, bsum += e;
-    for(auto &e: cost) cin >> e;
+    int n, u; cin >> n >> u;
+    vi nums(n);
+    for(auto &e: nums) cin >> e;
+    ld ans = -1;
+    for(int i = 0; i < n - 2; i++) {
+        int j = i + 1;
+        auto it = lower_bound(nums.begin(), nums.end(), nums[i] + u);
+        if(it == nums.end()) it = nums.end() - 1;
+        if(*it > nums[i] + u) it--;
+        int k = it - nums.begin();
+        if(k == i || k == j) continue;
 
-    vvi dp(n + 1, vi(bsum + 10, -inf));
-    for(ll i = 0; i <= brds[0]; i++)
-        dp[1][i] = w - i * cost[0];
-
-    int til = brds[0] + brds[1];
-
-    for(ll i = 2; i <= n; i++) {
-        for(ll j = 0; j <= til; j++) {
-            for(ll k = 0; k <= min(j, brds[i - 1]); k++)
-                if(dp[i - 1][j - k] >= 0)
-                    dp[i][j] = max(dp[i][j], min(dp[i - 1][j - k] + x, w + b * (j - k)) - k * cost[i - 1]);
-        }
-        til += brds[i];
+        ans = max(ans, (ld)(nums[k] - nums[j]) / (nums[k] - nums[i]));
     }
 
-    int ans = 0;
-    for(int i = 1; i <= bsum; i++) if(dp[n][i] >= 0)
-            ans = i;
-
-    cout << ans << endl;
-
+    if(ans == -1) cout << -1 << endl;
+    else
+        cout << fixed << setprecision(15) << ans << endl;
 
     return 0;
 }
-

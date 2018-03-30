@@ -36,35 +36,63 @@ typedef vector<si> vsi;
 #define S second
 #define pb push_back
 
-int main() {
-    ios::sync_with_stdio(0);
-    ll n, w, b, x; cin >> n >> w >> b >> x;
-    ll bsum = 0;
-    vi brds(n), cost(n);
-    for(auto &e: brds) cin >> e, bsum += e;
-    for(auto &e: cost) cin >> e;
+vi co;
+ll i, n, r, k;
 
-    vvi dp(n + 1, vi(bsum + 10, -inf));
-    for(ll i = 0; i <= brds[0]; i++)
-        dp[1][i] = w - i * cost[0];
+ll calc(ll i) {
+    if(i + r >= n) return n - 1;
+    return i + r;
+}
 
-    int til = brds[0] + brds[1];
+bool pos(ll m) {
+    ll cur = 0, kk = k;
+    vi cco = co;
+    for(i = 0; i < r; i++) cur += co[i];
 
-    for(ll i = 2; i <= n; i++) {
-        for(ll j = 0; j <= til; j++) {
-            for(ll k = 0; k <= min(j, brds[i - 1]); k++)
-                if(dp[i - 1][j - k] >= 0)
-                    dp[i][j] = max(dp[i][j], min(dp[i - 1][j - k] + x, w + b * (j - k)) - k * cost[i - 1]);
+    ll mi = 0;
+
+    for(ll i = 0; i < n; i++) {
+        if(i - mi > r) {
+            cur -= cco[mi];
+            mi++;
         }
-        til += brds[i];
+        if(i + r < n)
+            cur += cco[i + r];
+
+        if(cur < m) {
+            ll tmp = (m - cur);
+            kk -= tmp;
+            cco[calc(i)] += tmp;
+            cur += tmp;
+
+            if(kk < 0) return false;
+        }
+
     }
 
-    int ans = 0;
-    for(int i = 1; i <= bsum; i++) if(dp[n][i] >= 0)
-            ans = i;
+    return true;
 
-    cout << ans << endl;
 
+}
+
+int main() {
+    scanf("%lld%lld%lld", &n, &r, &k);
+    co.assign(n, 0);
+    ll mx = 0;
+    for(int i = 0; i < n; i++) {
+        scanf("%lld", &co[i]);
+        mx = max(mx, co[i]);
+    }
+
+    ll l = 0, h = 1e19;
+
+    while(l <= h) {
+        ll mid = (l + h) / 2;
+        if(pos(mid)) l = mid + 1;
+        else h = mid - 1;
+    }
+
+    printf("%lld\n", l - 1);
 
     return 0;
 }

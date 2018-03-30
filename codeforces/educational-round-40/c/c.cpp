@@ -37,33 +37,30 @@ typedef vector<si> vsi;
 #define pb push_back
 
 int main() {
-    ios::sync_with_stdio(0);
-    ll n, w, b, x; cin >> n >> w >> b >> x;
-    ll bsum = 0;
-    vi brds(n), cost(n);
-    for(auto &e: brds) cin >> e, bsum += e;
-    for(auto &e: cost) cin >> e;
+    int n; cin >> n;
+    vi nums(n);
+    int x = 1e9, y = 1;
+    for(int i = 0; i < n; i++) {
+        cin >> nums[i];
+        if(i)
+            y = max(y, (int)abs(nums[i] - nums[i - 1]));
+    }
+    int j = (nums[0] - 1) % y + 1, i = (nums[0] - 1) / y + 1;
+    int cur = nums[0];
+    int pos = true;
+    for(int k = 1; k < n; k++) {
+        if(nums[k] == cur + y) i++;
+        else if(nums[k] == cur - y) i--;
+        else if(nums[k] == cur - 1) j--;
+        else if(nums[k] == cur + 1) j++;
+        else pos = false;
 
-    vvi dp(n + 1, vi(bsum + 10, -inf));
-    for(ll i = 0; i <= brds[0]; i++)
-        dp[1][i] = w - i * cost[0];
-
-    int til = brds[0] + brds[1];
-
-    for(ll i = 2; i <= n; i++) {
-        for(ll j = 0; j <= til; j++) {
-            for(ll k = 0; k <= min(j, brds[i - 1]); k++)
-                if(dp[i - 1][j - k] >= 0)
-                    dp[i][j] = max(dp[i][j], min(dp[i - 1][j - k] + x, w + b * (j - k)) - k * cost[i - 1]);
-        }
-        til += brds[i];
+        if(i < 1 || j < 1 || j > y) pos = false;
+        cur = nums[k];
     }
 
-    int ans = 0;
-    for(int i = 1; i <= bsum; i++) if(dp[n][i] >= 0)
-            ans = i;
-
-    cout << ans << endl;
+    if(!pos) cout << "NO" << endl;
+    else cout << "YES" << endl << x << " " << y << endl;
 
 
     return 0;
