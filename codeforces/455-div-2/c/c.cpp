@@ -26,54 +26,44 @@ typedef vector<vector<iii> > vviii;
 typedef set<int> si;
 typedef vector<si> vsi;
 
-#define F(i, n) for(int i = 0; i < n; i++)
-#define F(i, j, n) for(int i = j; i < n; i++)
-
+#define forn(i, n) for (int i = 0; i < n; i++)
+#define all(a) (a).begin(), (a).end()
 #define inf 1000000000
 #define eps 1e-9
-#define pi acos(-1.0) // alternative #define pi (2.0 * acos(0.0))
+#define pi acos(-1.0)
 #define F first
 #define S second
 #define pb push_back
 
-vs s;
-vvi memo;
-ll solve(int l, int i) {
-    if(i >= vs.size()) return 1;
-    ll &ans = memo[l][i];
-    if(ans != -1) return ans;
-    ans = 0;
-    if(s[i] == "f") {
-        for(int i = 1; i )
-    }
-    for(int j = 1; j <= l + 1; j++)
-        ans += solve(j, i + 1);
-    return ans;
-
-}
-
+const int MOD = 1000000007;
 
 int main() {
     ios::sync_with_stdio(0);
-    int n; cin >> n;
-    s.assign(n, "");
-    for(auto &e: s) cin >> e;
-    num = 0;
-    int i = 0;
-    while(i < s.size()) {
-        if(s[i] == "s") {
-            i++;
-            continue;
-        }
-        else {
-            num++;
-            while(s[i] == "f") i++;
-        }
+    ll n; cin >> n;
+    string p;
+    forn(i, n) {
+        char c; cin >> c;
+        p += c;
     }
-    memo.resize(num + 10, vi(num + 10, -1));
-    cout << solve(1, 1) << endl;
+    vvi dp(n, vi(n + 1, 0));
+    dp[0][0] = 1;
 
+    for(int i = 1; i < n; i++) {
+            if(p[i - 1] == 'f') {
+                for(int j = 1; j < n; j++) {
+                    dp[i][j] = dp[i - 1][j - 1];
+                }
 
+            } else {
+                for(int j = n - 1; j >= 0; j--)
+                    dp[i][j] = (dp[i - 1][j] + dp[i][j + 1]) % MOD;
+            }
+
+    }
+
+    ll ans = 0;
+    for(int i = 0; i < n; i++) ans = (ans + dp[n - 1][i]) % MOD;
+    cout << ans << endl;
 
     return 0;
 }
