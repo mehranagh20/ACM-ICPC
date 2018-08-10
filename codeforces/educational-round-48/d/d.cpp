@@ -27,50 +27,37 @@ typedef set<int> si;
 typedef vector<si> vsi;
 
 #define forn(i, n) for (int i = 0; i < n; i++)
-#define forr(i, n) for (int i = n; i >= 0; i--)
-#define all(a) (a).begin(), (a).end()
 #define inf 1000000000
 #define eps 1e-9
 #define pi acos(-1.0)
 #define F first
 #define S second
-
-int const MX = 1100, MOD = 1e9 + 7;
-ll dp[MX][MX];
-ll k, pa, pb;
-
-ll pw(ll a, ll b=MOD - 2) {
-    if (b == 0) {
-        return 1;
-    }
-    ll v = pw(a, b / 2);
-    v = (v * v) % MOD;
-    if (b & 1) {
-        v = (v * a) % MOD;
-    }
-    return v;
-}
-
-ll get_dp(int i, int j) {
-    if(j >= k) return j;
-    return dp[i][j];
-}
+#define pb push_back
 
 int main() {
-    ios::sync_with_stdio(0);
-    cin >> k >> pa >> pb;
-    ll s = pa + pb;
-    ll x = (s * pw(pb)) % MOD;
-    pa = (pa * pw(s)) % MOD;
-    pb = (pb * pw(s)) % MOD;
-
-    forr(i, k)
-        forr(j, k) {
-            if(i + j >= k) dp[i][j] = (i + j - 1 + x) % MOD;
-            else dp[i][j] = (pa * get_dp(i + 1, j) + pb * get_dp(i, i + j)) % MOD;
+    ios::sync_with_stdio(false);
+    int n, m, rx = 0, cx = 0; cin >> n >> m;
+    vi r(n), c(m);
+    forn(i, n) cin >> r[i], rx ^= r[i];
+    forn(i, m) cin >> c[i], cx ^= c[i];
+    if(rx != cx) {
+      cout << "NO" << endl;
+      return 0;
+    }
+    cout << "YES\n";
+    forn(i, n) {
+      forn(j, m) {
+        if(i == n - 1 && j < m - 1) cout << c[j] << ' ';
+        else if(i < n - 1 && j == m - 1) cout << r[i] << ' ';
+        else if(i < n - 1 && j < m - 1) cout << "0 ";
+        else {
+          rx = 0;
+          for(int i = 0; i < m - 1; i++) rx ^= c[i];
+          cout << (r[n - 1] ^ rx) << ' ';
         }
-
-    cout << dp[1][0] << endl;
+      }
+      cout << endl;
+    }
 
     return 0;
 }

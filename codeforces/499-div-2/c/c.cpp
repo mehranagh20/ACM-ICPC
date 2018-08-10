@@ -27,50 +27,61 @@ typedef set<int> si;
 typedef vector<si> vsi;
 
 #define forn(i, n) for (int i = 0; i < n; i++)
-#define forr(i, n) for (int i = n; i >= 0; i--)
 #define all(a) (a).begin(), (a).end()
 #define inf 1000000000
 #define eps 1e-9
 #define pi acos(-1.0)
 #define F first
 #define S second
+#define pb push_back
 
-int const MX = 1100, MOD = 1e9 + 7;
-ll dp[MX][MX];
-ll k, pa, pb;
 
-ll pw(ll a, ll b=MOD - 2) {
-    if (b == 0) {
-        return 1;
+int n, m;
+vi as, bs;
+
+bool pos(double f) {
+    double ms = (m + f) / as[0];
+    if(f - ms < eps) return false;
+    f -= ms;
+
+    for(int i = 1; i < n; i++) {
+        double ms = (m + f) / bs[i];
+        if(f - ms < eps) return false;
+        f -= ms;
+        ms = (m + f) / as[i];
+        if(f - ms < eps) return false;
+        f -= ms;
     }
-    ll v = pw(a, b / 2);
-    v = (v * v) % MOD;
-    if (b & 1) {
-        v = (v * a) % MOD;
-    }
-    return v;
+    ms = (m + f) / bs[0];
+    if(f - ms < eps) return false;
+
+    return true;
+
 }
 
-ll get_dp(int i, int j) {
-    if(j >= k) return j;
-    return dp[i][j];
-}
+int const MX = 1e4;
 
 int main() {
     ios::sync_with_stdio(0);
-    cin >> k >> pa >> pb;
-    ll s = pa + pb;
-    ll x = (s * pw(pb)) % MOD;
-    pa = (pa * pw(s)) % MOD;
-    pb = (pb * pw(s)) % MOD;
+    cin >> n >> m;
+    forn(i, n) {
+        int tmp; cin >> tmp;
+        as.push_back(tmp);
+    }
+    forn(i, n) {
+        int tmp; cin >> tmp;
+        bs.push_back(tmp);
+    }
 
-    forr(i, k)
-        forr(j, k) {
-            if(i + j >= k) dp[i][j] = (i + j - 1 + x) % MOD;
-            else dp[i][j] = (pa * get_dp(i + 1, j) + pb * get_dp(i, i + j)) % MOD;
-        }
-
-    cout << dp[1][0] << endl;
+    double a = 0, b = 1e9 + 100;
+    bool po = false;
+    forn(i, MX) {
+        double mid = (a + b) / 2;
+        if(pos(mid)) b = mid, po = true;
+        else a = mid;
+    }
+    if(po) cout << fixed << setprecision(8) << b << endl;
+    else cout << -1 << endl;
 
     return 0;
 }

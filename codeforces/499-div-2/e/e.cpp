@@ -27,50 +27,36 @@ typedef set<int> si;
 typedef vector<si> vsi;
 
 #define forn(i, n) for (int i = 0; i < n; i++)
-#define forr(i, n) for (int i = n; i >= 0; i--)
 #define all(a) (a).begin(), (a).end()
 #define inf 1000000000
 #define eps 1e-9
 #define pi acos(-1.0)
 #define F first
 #define S second
+#define pb push_back
 
-int const MX = 1100, MOD = 1e9 + 7;
-ll dp[MX][MX];
-ll k, pa, pb;
-
-ll pw(ll a, ll b=MOD - 2) {
-    if (b == 0) {
-        return 1;
-    }
-    ll v = pw(a, b / 2);
-    v = (v * v) % MOD;
-    if (b & 1) {
-        v = (v * a) % MOD;
-    }
-    return v;
-}
-
-ll get_dp(int i, int j) {
-    if(j >= k) return j;
-    return dp[i][j];
+ll gcd(ll a, ll b) {
+  return (b == 0? a : gcd(b, a % b));
 }
 
 int main() {
     ios::sync_with_stdio(0);
-    cin >> k >> pa >> pb;
-    ll s = pa + pb;
-    ll x = (s * pw(pb)) % MOD;
-    pa = (pa * pw(s)) % MOD;
-    pb = (pb * pw(s)) % MOD;
+    ll n, k, g, t, c; cin >> n >> k;
+    cin >> g;
+    forn(i, n - 1)
+      cin >> t, g = gcd(g, t);
 
-    forr(i, k)
-        forr(j, k) {
-            if(i + j >= k) dp[i][j] = (i + j - 1 + x) % MOD;
-            else dp[i][j] = (pa * get_dp(i + 1, j) + pb * get_dp(i, i + j)) % MOD;
-        }
+    set<ll> ans;
+    c = g;
+    while(1) {
+      int cur = c % k;
+      if(ans.find(cur) != ans.end())
+        break;
+      ans.insert(cur), c += g;
+    }
 
-    cout << dp[1][0] << endl;
+    cout << ans.size() << endl;
+    for(auto &e: ans) cout << e << " ";
 
     return 0;
 }

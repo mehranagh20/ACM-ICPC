@@ -26,44 +26,38 @@ typedef vector<vector<iii> > vviii;
 typedef set<int> si;
 typedef vector<si> vsi;
 
-#define F(i, n) for(int i = 0; i < n; i++)
-#define F(i, j, n) for(int i = j; i < n; i++)
-
+#define forn(i, n) for (int i = 0; i < n; i++)
+#define all(a) (a).begin(), (a).end()
 #define inf 1000000000
 #define eps 1e-9
-#define pi acos(-1.0) // alternative #define pi (2.0 * acos(0.0))
+#define pi acos(-1.0)
 #define F first
 #define S second
 #define pb push_back
-#define forn(i, n) for (int i = 0; i < n; i++)
-
-struct woo {
-  int h, i;
-  inline bool operator <(const woo &r) {
-    if(r.i != i) return i < r.i;
-    return h > r.h;
-  }
-};
 
 int main() {
     ios::sync_with_stdio(0);
-    int n, l, r, mxh = 0; cin >> n >> l >> r;
-    vector<woo> all(n);
-    forn(i, n) cin >> all[i].h, mxh += all[i].h;
-    int tmpl = l;
-    l = mxh - r, r = mxh - tmpl;
-    forn(i, n) cin >> all[i].i;
-    sort(all.begin(), all.end());
-    vi dp(mxh + 1, -inf);
-    dp[0] = 0;
+    int n, k; cin >> n >> k;
+    string str; cin >> str;
+    sort(str.begin(), str.end());
+    int ans = 0, num = 0;
+    char last;
     forn(i, n) {
-      for(int h = mxh - all[i].h; h >= 0; h--) {
-        dp[h + all[i].h] = max(dp[h + all[i].h],
-          dp[h] + all[i].i * (h + all[i].h <= r && h + all[i].h >= l));
-      }
-    }
+        if(num == k) break;
+        if(i == 0) {
+            ans += str[i] - 'a' + 1, num++;
+            last = str[i];
+            continue;
+        }
+        if(str[i] - last >= 2) {
+            ans += str[i] - 'a' + 1, num++;
+            last = str[i];
+        }
 
-    cout << *max_element(dp.begin(), dp.end()) << endl;
+    }
+    if(num < k) ans = -1;
+    cout << ans << endl;
+
 
     return 0;
 }
